@@ -1,5 +1,7 @@
-Messages.insert({
-	text: $('.input-box_text').val(),
-	user: Meteor.userId(),
-	timestamp: Date.now()
+Meteor.methods({
+  newMessage: function (message) {
+    message.timestamp = Date.now();
+    message.user = Meteor.userId();
+    Messages.insert(message);
+  }
 });
