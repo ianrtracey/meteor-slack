@@ -4,7 +4,7 @@ Template.messages.helpers({
 
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_AND_EMAIL'
-})
+});
 
 Template.registerHelper("timestampToTime", function (timestamp) {
 	var date = new Date(timestamp);
